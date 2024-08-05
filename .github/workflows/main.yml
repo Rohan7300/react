@@ -13,4 +13,4 @@ jobs:
 
    - name: Build Docker Image
      run: |
-      docker run -t react . latest
+      docker run -t react:latest .
