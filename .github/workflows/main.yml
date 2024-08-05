@@ -8,9 +8,19 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
-   - name: Checkout code
-     uses: action/checkout@v3
 
-   - name: Build Docker Image
-     run: |
-      docker run -t react:latest .
+       - name: Checkout code
+         uses: action/checkout@v3
+       - name: Set up node.js
+         uses: actions/setup-node@v3
+         with:
+          node-version: '20'
+
+       - name: Install dependencies
+         run: |
+          npm install
+
+
+       - name: Build Docker Image
+         run: |
+          docker run -t react:latest .
