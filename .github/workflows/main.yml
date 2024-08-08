@@ -35,7 +35,7 @@ jobs:
         aws-region: ap-south-1
         
     - name: login to ecr
-    - id: login ecr
+      id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
       
     - name: build, Tag
