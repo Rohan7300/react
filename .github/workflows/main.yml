@@ -41,7 +41,7 @@ jobs:
     - name: build, Tag
       id: build-image
       env:
-        ECR_REGISTORY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: lesson-086
         IMAGE_TAG: latest
       run: |
