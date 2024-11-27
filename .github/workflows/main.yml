@@ -57,5 +57,5 @@ jobs:
           
     - name: Service URL
       run: |
-            kubectl get svc
+            kubectl get svc 
         
